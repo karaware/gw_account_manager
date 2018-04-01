@@ -1,10 +1,10 @@
 <?php
 
-//MySQLのログイン情報
+//MySQLのログイン情報(userとpwdを削除)
 $dbname =  $_REQUEST['gw'];
 $host = '192.168.25.150';
-$user = 'root';
-$pwd = 'q4l3o2o0g424arao';
+$user = '';
+$pwd = '';
 
 
 //アカウント情報を変数に入れる
@@ -26,19 +26,19 @@ $dsn  = 'mysql:host=' . $host . ';dbname=' . $dbname . ';charset=utf8';
 //GWアドレスを変数に格納
 switch($dbname){
     case "asterisk":
-    $db_ip = "202.78.218.73";
+    $db_ip = "IPアドレス";
     break;
 
     case "asterisk_sb":
-    $db_ip = "202.78.218.75";
+    $db_ip = "IPアドレス";
     break;
 
     case "asterisk_sb3":
-    $db_ip = "202.78.218.81";
+    $db_ip = "IPアドレス";
     break;
 
     case "asterisk_ncom":
-    $db_ip = "202.78.218.85";
+    $db_ip = "IPアドレス";
     break;
 }
 
@@ -190,7 +190,7 @@ $pdo = null;
 
     //SB回線　代表組１の場合    
     if($dbname == "asterisk"){
-        $db_ip = "202.78.218.74";
+        $db_ip = "IPアドレス";
         print("<br>");
         print("<br>username=" . $name);
         print("<br>type=friend");
@@ -222,9 +222,9 @@ $pdo = null;
         <div class="panel-body">
             <?php
             if($dbname == "asterisk"){
-                $db_ip = "202.78.218.73";
+                $db_ip = "IPアドレス";
                 print($name . ":" . $secret . "@" . $db_ip . "/" . $num ."<br><br>");
-                $db_ip = "202.78.218.74";
+                $db_ip = "IPアドレス";
                 print($name . ":" . $secret . "@" . $db_ip . "/" . $num ."<br>");
             }else{
             print($name . ":" . $secret . "@" . $db_ip . "/" . $num ."<br>");
@@ -239,11 +239,11 @@ $pdo = null;
 
 <!-- ▼追加履歴用テーブル：historyに履歴を追加 -->
 <?php
-//MySQLのログイン情報
+//MySQLのログイン情報(userとpwdを削除)
 $dbname =  'gwat';
 $host = 'localhost';
-$user = 'root';
-$pwd = 'q4l3o2o0g424arao';
+$user = '';
+$pwd = '';
 //DSN(Date Source Name)　([DSN接頭辞]:host=[ホスト名];dbname=[データベース名];charset=[文字コード])
 $dsn  = 'mysql:host=' . $host . ';dbname=' . $dbname . ';charset=utf8';
 $register_time = date('Y-n-j H:i:s');

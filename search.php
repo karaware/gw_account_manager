@@ -60,11 +60,11 @@
 	</div>
     </div>
     <?php
-    //MySQLのログイン情報
+    //MySQLのログイン情報(userとpwdを削除)
     //$dbname =  'test';
     $host = '192.168.25.150';
-    $user = 'root';
-    $pwd = 'q4l3o2o0g424arao';
+    $user = '';
+    $pwd = '';
     $dbname = $_REQUEST['gw'];
     //if(empty($dbname)){
         //$dbname = "asterisk";

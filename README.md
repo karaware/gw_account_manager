@@ -11,3 +11,5 @@ Description
 Requirement
 ・jQuery
 ・bootstrap
+
+※2017/03/31 利用終了、再利用することはないため許可を得て公開
